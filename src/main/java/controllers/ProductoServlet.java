@@ -97,6 +97,8 @@ public class ProductoServlet extends HttpServlet {
                 if (usernameOptional.isPresent()) {
                     out.println("<td>$" + p.getPrecio() + "</td>");
                     out.println("<td>");
+
+                    //el error venía del signo de pregunta extra dentro del href
                     out.println("<a href='" + req.getContextPath() + "/agregar-carro?id=" + p.getIdProducto() + "' class='btn btn-sm btn-outline-primary'>");
                     out.println("<i class='bi bi-cart-plus'></i> Agregar al carro");
                     out.println("</a>");
