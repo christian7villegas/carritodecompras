@@ -43,5 +43,6 @@ public class ItemCarro {
     public double getSubtotal() {
         return cantidad * producto.getPrecio();
     }
+
 }
 
