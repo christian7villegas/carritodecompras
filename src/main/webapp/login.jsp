@@ -4,29 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Iniciar sesión</title>
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/styles.css">
+
+    <!-- BOOTSTRAP 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 
-<div class="login-container">
-    <h1>Iniciar sesión</h1>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow p-4" style="width: 350px;">
 
-    <form action="<%= request.getContextPath() %>/login" method="post">
-        <div>
-            <label for="user">Usuario</label><br>
-            <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
-        </div>
+        <h3 class="text-center mb-4">🔐 Iniciar sesión</h3>
 
-        <div>
-            <label for="password">Contraseña</label><br>
-            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
-        </div>
+        <form action="<%= request.getContextPath() %>/login" method="post">
 
-        <div>
-            <input type="submit" value="Entrar">
-        </div>
-    </form>
+            <div class="mb-3">
+                <label for="username" class="form-label">Usuario</label>
+                <input type="text"
+                       class="form-control"
+                       id="username"
+                       name="username"
+                       placeholder="Ingrese su usuario"
+                       required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password"
+                       class="form-control"
+                       id="password"
+                       name="password"
+                       placeholder="Ingrese su contraseña"
+                       required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Entrar
+            </button>
+
+        </form>
+
+    </div>
 </div>
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

@@ -36,8 +36,8 @@ public class ItemCarro {
         if (o == null || getClass() != o.getClass()) return false;
 
         ItemCarro itemCarro = (ItemCarro) o;
-        return Objects.equals(producto.getIdProducto(), itemCarro.producto.getIdProducto())
-                && Objects.equals(cantidad, itemCarro.cantidad);
+        return Objects.equals(producto.getIdProducto(), itemCarro.producto.getIdProducto());
+
     }
 
     public double getSubtotal() {
